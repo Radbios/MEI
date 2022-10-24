@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+}
+
+body {
+    background: #eef1fc;
+    min-height: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.containerMain {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 5px 5px 4px #ccc;
+}
+
+.containerLeft {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    width: 30%;
+    text-align: center;
+    background: #3d479b;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.imgBox {
+    width: 80px;
+}
+
+.imgBox > img {
+    width: 100%;
+}
+
+.title {
+    font-style: Bold;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.titleBoxLeft {
+    padding: 0 40px;
+}
+
+.containerRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    padding: 12px;
+    gap: 48px;
+}
+
+.titleBoxRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    padding: 0 130px;
+}
+
+.inputBoxRight {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.labelInputRight {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.labelInputRight > label {
+    color: #7c7c7c;
+}
+
+.labelInputRight > input {
+    background: #f1f8ff;
+    border-radius: 10px;
+    width: 100%;
+    padding: 12px;
+    box-shadow: 0 4px 4px #ccc;
+    outline: none;
+}
+
+.checkBoxRight {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkBoxRight > a {
+    text-decoration: none;
+    color: #3D479B;
+}
+
+.checkboxText {
+    color: #7c7c7c;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.checkboxText > input[type=checkbox] {
+    background: #f1f8ff;
+    box-shadow: 0 4px 4px #ccc;
+}
+
+#titleBlue {
+    color: #3d479b;
+    font-size: 32px;
+}
+
+#subtitle {
+    color: #7c7c7c;
+}
+
+.boxBtnLogin {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.btnLogin {
+    width: 70%;
+    padding: 12px;
+    background: #3d479b;
+    border-radius: 4px;
+    color: white;
+    box-shadow: 0 4px 4px #ccc;
+    font-weight: 700;
+}
+
+.btnLogin:hover {
+    background: #2c3bc7;
+}
