@@ -9,6 +9,7 @@
 body {
     background: #eef1fc;
     min-height: 100%;
+    min-width: 1029px;
 }
 
 main {
@@ -149,11 +150,15 @@ main {
     padding: 12px;
     background: #3d479b;
     border-radius: 4px;
-    color: white;
     box-shadow: 0 4px 4px #ccc;
     font-weight: 700;
 }
 
 .btnLogin:hover {
     background: #2c3bc7;
+}
+
+.btnLogin > a {
+    color: white;
+    text-decoration: none;
 }

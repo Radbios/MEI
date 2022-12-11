@@ -1,17 +1,5 @@
 #table-title{
-    display: flex;
-    justify-content: space-between;
-    margin: 5%;
-    margin-right: 10%;
-    align-items: center;
+    padding-bottom: 24px;
 }
 
-#table-title button {
-    height: 40px;
-    width: 80px;
-    border-color: transparent;
-}
 
-#table-title button:hover {
-    background-color: rgb(99, 99, 221);
-}
