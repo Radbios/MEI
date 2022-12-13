@@ -1,7 +1,6 @@
 @extends('layout')
 
 @section('content')
-    
     <div id="home">
         <div id="content1" class="margin-main border-curved bg-blue">
 
@@ -17,8 +16,6 @@
                 </div>
             </div>
             <div id="content4" class="bg-blue border-curved">
-
-                
 
             </div>
         </div>

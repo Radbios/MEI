@@ -12,9 +12,8 @@
         </div>
         <div class="containerRight">
             <div class="titleBoxRight">
-                <p class="title" id="titleBlue">Recuperação</p>
-                <p id="subtitle">Digite seu e-mail e CPF, se as informações estiverem corretas enviaremos por e-mail a nova
-                    senha.</p>
+                <p class="title" id="titleBlue">Login</p>
+                <p id="subtitle">Bem-vindo! Somos um sistema de gerenciamento desenvolvido por alunos da UFAL.</p>
             </div>
             <div class="inputBoxRight">
                 <div class="labelInputRight">
@@ -22,15 +21,21 @@
                     <input name="email" id="email" type="text">
                 </div>
                 <div class="labelInputRight">
-                    <label for="CPF">CPF</label>
-                    <input name="CPF" id="CPF" type="password">
+                    <label for="senha">Senha</label>
+                    <input name="senha" id="senha" type="password">
                 </div>
-
+                <div class="checkBoxRight">
+                    <div class="checkboxText">
+                        <input type="checkbox" name="" id="remember-me">
+                        <label for="remember-me">Lembre-me</label>
+                    </div>
+                    <a href="recover.html">Esqueci minha senha</a>
+                </div>
             </div>
             <div class="boxBtnLogin">
                 <button class="btnLogin">
-                    <a href="login.html">
-                        Enviar
+                    <a href="dashboard.html">
+                        Login
                     </a>
                 </button>
             </div>
