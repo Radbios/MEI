@@ -29,12 +29,12 @@
                         <input type="checkbox" name="" id="remember-me">
                         <label for="remember-me">Lembre-me</label>
                     </div>
-                    <a href="recover.html">Esqueci minha senha</a>
+                    <a href="/recuperacao">Esqueci minha senha</a>
                 </div>
             </div>
             <div class="boxBtnLogin">
                 <button class="btnLogin">
-                    <a href="dashboard.html">
+                    <a href="/">
                         Login
                     </a>
                 </button>

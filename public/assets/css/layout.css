@@ -120,13 +120,6 @@ main{
     background-color: #2c3bc7;
 }
 
-table{
-}
-
-tr{
-   
-    
-}
 
 #clientes, #encomendas, #estoque, #produtos {
     display: flex;
