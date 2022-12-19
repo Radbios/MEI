@@ -17,13 +17,25 @@
 </head>
 
 <body>
+    <nav class="navbar shadow" style="background-color:#3d479b;">
+        <div class="d-flex justify-content-center align-items-center container-fluid">
+            <div class="d-flex justify-content-center" style="width:80px;">
+                <img src="../assets/img/brasao-ufal.png" width="100%" alt="" class="brasao-ufal">
+            </div>
+            <div style="font-size:24px;color:#fff">
+                <strong>
+                    Ambiente de Gerenciamento MEI
+                </strong>
+            </div>
+        </div>
+    </nav>
     <div class="content">
         <sidebar>
             <x-sideBar></x-sideBar>
         </sidebar>
-        <main>
+        <div class="container-sm">
             @yield('content')
-        </main>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">

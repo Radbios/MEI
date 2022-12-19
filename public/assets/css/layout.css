@@ -29,10 +29,9 @@ a {
 
 sidebar {
     display: grid;
-    grid-template-rows: 3fr 7fr 3fr;
-    padding: 1%;
-    gap: 1%;
+    grid-template-rows: 2fr 1fr;
     background-color: #3D479B;
+    height: 100%;
 }
 
 main{
@@ -123,6 +122,7 @@ main{
 
 #clientes, #encomendas, #estoque, #produtos {
     display: flex;
+    padding: 24px;
     flex-direction: column;
 }
 

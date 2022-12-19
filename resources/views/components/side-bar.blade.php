@@ -1,6 +1,6 @@
-<div id="logo" class="side-item">
+<!-- <div id="logo" class="side-item">
     <img src="../assets/img/brasao-ufal.png" alt="" class="brasao-ufal">
-</div>
+</div> -->
 <div class="side-list">
     <ul>
         <li class="side-item">
@@ -57,6 +57,6 @@
 <div id="logout" class="side-item">
     <a href="/login" class="link-item">
         <i class="bi bi-door-open"></i>
-        <div class="item-text">Logout</div>
+        <div class="item-text">Sair</div>
     </a>
 </div>
