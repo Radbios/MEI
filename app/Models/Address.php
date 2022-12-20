@@ -16,4 +16,9 @@ class Address extends Model
         'number',
         'cep'
     ];
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
 }

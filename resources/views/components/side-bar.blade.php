@@ -18,21 +18,21 @@
         </li>
 
         <li class="side-item">
-            <a href="/clientes" class="link-item">
+            <a href="{{route("clientes.index")}}" class="link-item">
                 <i class="bi bi-person-lines-fill"></i>
                 <div class="item-text">Clientes</div>
             </a>
         </li>
 
         <li class="side-item">
-            <a href="/produtos" class="link-item">
+            <a href="{{route("produtos.index")}}" class="link-item">
                 <i class="bi bi-clipboard2"></i>
                 <div class="item-text">Produtos</div>
             </a>
         </li>
 
         <li class="side-item">
-            <a href="/encomendas" class="link-item">
+            <a href="{{Route("encomendas.index")}}" class="link-item">
                 <i class="bi bi-bag-fill"></i>
                 <div class="item-text">Encomendas</div>
             </a>

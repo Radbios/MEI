@@ -12,6 +12,12 @@ class Client extends Model
     protected $fillable = [
         'name',
         'phoneNumber',
-        'addressId'
+        'addressId',
+        'email'
     ];
+
+    public function address()
+    {
+        return $this->belongsTo(Address::class, "addressId", 'id');
+    }
 }
