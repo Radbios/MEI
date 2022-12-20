@@ -1,6 +1,12 @@
 @extends('layout')
 
 @section('content')
+<div class="container-sm p-4">
+    <div id="table-title" class="d-flex justify-content-between mx-4">
+        <div class="title-text">
+            Editar Informações
+        </div>
+    </div>
     <form action="{{Route("clientes.update", [$cliente->id])}}" method="post">
         @csrf
         @method('put')
@@ -8,7 +14,7 @@
             <div class="mb-3">
                 <label for="name" class="form-label">Nome Completo</label>
                 <input type="text" class="form-control" id="name" name="name" value="{{$cliente->name}}"
-                    aria-describedby="emailHelp">
+                aria-describedby="emailHelp">
                 <!-- <div id="emailHelp" class="form-text"></div> -->
             </div>
             <div class="mb-3 d-flex flex-row justify-content-between">
@@ -20,7 +26,7 @@
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email" value="{{$cliente->email}}"
-                    aria-describedby="emailHelp">
+                aria-describedby="emailHelp">
                 <!-- <div id="emailHelp" class="form-text"></div> -->
             </div>
             <div class="mb-3 d-flex flex-row gap-2 justify-content-between">
@@ -50,4 +56,5 @@
             <button type="submit" class="btn btn-primary">Salvar</button>
         </div>
     </form>
-@endsection
+</div>
+    @endsection

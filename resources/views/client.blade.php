@@ -91,7 +91,7 @@
                         </td>
 
                         <td>
-                            <div class="">
+                            <div class="d-flex space-between" style="width:200px;background:red;">
                                 <button type="button" class="btn btn-primary bg-blue">Ver</button>
                                 <button type="button" class="btn btn-primary bg-blue">Editar</button>
                                 <button type="button" class="btn btn-primary bg-blue">Deletar</button>

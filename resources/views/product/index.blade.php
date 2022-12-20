@@ -33,7 +33,7 @@
                                 {{$produto->price}}
                             </td>
                             <td>
-                                <div class="">
+                                <div class="d-flex gap-2">
                                     <a href="{{route('produtos.show', [$produto->id])}}">
                                         <button type="button" class="btn btn-primary bg-blue">
                                             Ver

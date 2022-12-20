@@ -36,15 +36,15 @@ aria-hidden="true">
                 </div>
                 <div class="mb-3 d-flex flex-row gap-2 justify-content-between">
                     <div class="mb-3">
-                        <label for="city" class="form-label">Endereço</label>
+                        <label for="city" class="form-label">Cidade</label>
                         <input type="text" class="form-control" id="city" name="city">
                     </div>
                     <div class="mb-3">
-                        <label for="neighborhood" class="form-label">Endereço</label>
+                        <label for="neighborhood" class="form-label">Bairro</label>
                         <input type="text" class="form-control" id="neighborhood" name="neighborhood">
                     </div>
                     <div class="mb-3">
-                        <label for="street" class="form-label">Endereço</label>
+                        <label for="street" class="form-label">Rua</label>
                         <input type="text" class="form-control" id="street" name="street">
                     </div>
                     <div class="mb-3">
