@@ -1,8 +1,8 @@
-html, body{
+body{
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-color: #eef1fc;
 }
 
@@ -40,7 +40,7 @@ main{
 
 .content{
     display: grid;
-    height: 100%;
+    height: 91%;
     width: 100%;
     grid-template-columns: 1.5fr 8.5fr;
     gap: 0.5%;

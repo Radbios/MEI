@@ -3,12 +3,12 @@
 </div> -->
 <div class="side-list">
     <ul>
-        <li class="side-item">
+        <!-- <li class="side-item">
             <a href="" class="link-item">
                 <i class="bi bi-list"></i>
                 <div class="item-text">Menu</div>
             </a>
-        </li>
+        </li> -->
 
         <li class="side-item">
             <a href="/visaogeral" class="link-item">
@@ -42,13 +42,6 @@
             <a href="/estoque" class="link-item">
                 <i class="bi bi-box-seam"></i>
                 <div class="item-text">Estoques</div>
-            </a>
-        </li>
-
-        <li class="side-item">
-            <a href="/vendas" class="link-item">
-                <i class="bi bi-cart2"></i>
-                <div class="item-text">Vendas</div>
             </a>
         </li>
     </ul>

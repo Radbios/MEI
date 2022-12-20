@@ -1,34 +1,28 @@
 #home
 {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-rows: 1.5fr 3fr;
-    gap: 15px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
 }
 
-#content1{
-    margin-top: 2%;
+.wrapper {
+    width: 20%;
+    max-height: 120px;
+    border: 1px solid #ddd;
+    display: flex;
+    overflow-x: auto;
+
 }
 
-#content2{
-    margin-bottom: 2%;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 15px;
+.wrapper::-webkit-scrollbar {
+    width: 0;
 }
 
-#content3{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 15px;
+.wrapper .item{
+    min-width: 110px;
+    height: 110px;
+    line-height: 110px;
+    text-align: center;
+    background-color: #ddd;
+    margin-right: 2px;
 }
-
-.margin-main{
-    margin-left: 3%;
-    margin-right: 3%;
-}
-
-
-
-
