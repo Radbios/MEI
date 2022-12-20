@@ -99,10 +99,6 @@
                         </td>
                     </tr>
                 </tbody>
-
-                <tbody>
-
-                </tbody>
             </table>
         </div>
     </section>
