@@ -39,7 +39,7 @@
         </li>
 
         <li class="side-item">
-            <a href="/estoque" class="link-item">
+            <a href="{{ Route("estoque.index") }}" class="link-item">
                 <i class="bi bi-box-seam"></i>
                 <div class="item-text">Estoques</div>
             </a>
