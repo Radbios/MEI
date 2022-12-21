@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-@include('create')
+@include('estoque.create')
     <section id="estoque">
         <div id="table-title" class="d-flex justify-content-between mx-4">
             <div class="title-text">

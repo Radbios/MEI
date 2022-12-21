@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-@include('create')
+@include('order.create')
     <section id="encomendas">
         <div id="table-title" class="d-flex justify-content-between mx-4">
             <div class="title-text">
@@ -12,7 +12,7 @@
                 <button type="button" class="btn btn-primary bg-blue" data-bs-toggle="modal"
                     data-bs-target="#exampleModal">Adicionar</button>
                 <!-- Modal para adicionar Pedidos  -->
-                
+
             </div>
         </div>
         <div id="table-body">
