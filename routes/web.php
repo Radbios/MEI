@@ -27,14 +27,14 @@ Route::get('/visaogeral', function () {
     return view('dashboard');
 });
 
-    // --- ENDEREÇO --- 
+    // --- ENDEREÇO ---
 
 Route::post('/endereco/store', [AddressController::class, 'store'])->name('endereco.store');
 Route::put('/endereco/update', [AddressController::class, 'update'])->name('endereco.update');
-    
+
         // --- ---
 
-    // --- CLIENTES --- 
+    // --- CLIENTES ---
 
 Route::get('/clientes', [ClientController::class, 'index'])->name('clientes.index');
 Route::get('/clientes/create', [ClientController::class, 'create'])->name('clientes.create');
@@ -47,7 +47,7 @@ Route::delete('/clientes/delete/{client_id}', [ClientController::class, 'delete'
     // --- ---
 
     // --- ENCOMENDAS ---
-    
+
 Route::get('/encomendas', [OrderController::class, 'index'])->name('encomendas.index');
 Route::get('/encomendas/create', [OrderController::class, 'create'])->name('encomendas.create');
 Route::post('/encomendas/store', [OrderController::class, 'store'])->name('encomendas.store');
@@ -60,13 +60,13 @@ Route::delete('/encomendas/delete/{encomendas_id}', [OrderController::class, 'de
 
     // --- ESTOQUES ---
 
-// Route::get('/estoque', [OrderController::class, 'index'])->name('estoque.index');
-// Route::get('/estoque/create', [OrderController::class, 'create'])->name('estoque.create');
-// Route::post('/estoque/store', [OrderController::class, 'store'])->name('estoque.store');
-// Route::get('/estoque/{estoque_id}', [OrderController::class, 'show'])->name('estoque.show');
-// Route::get('/estoque/edit/{estoque_id}', [OrderController::class, 'edit'])->name('estoque.edit');
-// Route::put('/estoque/update', [OrderController::class, 'update'])->name('estoque.update');
-// Route::delete('/estoque/delete/{estoque_id}', [OrderController::class, 'delete'])->name('estoque.delete');
+ Route::get('/estoque', [MaterialController::class, 'index'])->name('estoque.index');
+ Route::get('/estoque/create', [MaterialController::class, 'create'])->name('estoque.create');
+ Route::post('/estoque/store', [MaterialController::class, 'store'])->name('estoque.store');
+ Route::get('/estoque/{estoque_id}', [MaterialController::class, 'show'])->name('estoque.show');
+ Route::get('/estoque/edit/{estoque_id}', [MaterialController::class, 'edit'])->name('estoque.edit');
+ Route::put('/estoque/update', [MaterialController::class, 'update'])->name('estoque.update');
+ Route::delete('/estoque/delete/{estoque_id}', [MaterialController::class, 'delete'])->name('estoque.delete');
     // --- ---
 
     // --- PRODUTOS ---
@@ -98,7 +98,7 @@ Route::put('/vendas/update', [SellController::class, 'update'])->name('vendas.up
 Route::delete('/vendas/delete/{vendas_id}', [SellController::class, 'delete'])->name('vendas.delete');
     // --- ---
 
-    // --- MATERIAIS --- 
+    // --- MATERIAIS ---
 
 Route::get('/materiais', [MaterialController::class, 'index'])->name('materiais.index');
 Route::get('/materiais/create', [MaterialController::class, 'create'])->name('materiais.create');

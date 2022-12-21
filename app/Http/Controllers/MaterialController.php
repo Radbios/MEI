@@ -9,7 +9,7 @@ class MaterialController extends Controller
 {
     public function index(){
         $materiais = Material::all();
-        return view('material.index', compact('materiais'));
+        return view('estoque.index', compact('materiais'));
     }
 
     public function store(Request $request){
@@ -19,18 +19,18 @@ class MaterialController extends Controller
             'price' => $request['price'],
             'amount' => $request['amount'],
             'unit' => $request['unit'],
-        ]);     
-        return redirect()->route('materiais.index');
+        ]);
+        return redirect()->route('estoque.index');
     }
 
     public function show($material_id){
         $material = Material::findOrFail($material_id);
-        return view("material.show", compact("material"));
+        return view("estoque.show", compact("material"));
     }
 
     public function edit($material_id){
         $material = Material::findOrFail($material_id);
-        return view("material.edit", compact("material"));
+        return view("estoque.edit", compact("material"));
     }
 
     public function update(Request $request, $material_id){
@@ -41,11 +41,11 @@ class MaterialController extends Controller
             'amount' => $request['amount'],
             'unit' => $request['unit'],
         ]);
-        return redirect()->route('materiais.index');
+        return redirect()->route('estoque.index');
     }
 
     public function delete($material_id){
         Material::findOrFail($material_id)->delete();
-        return redirect()->route('materiais.index');
+        return redirect()->route('estoque.index');
     }
 }
