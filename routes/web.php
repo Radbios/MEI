@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('dashboard');
 });
 
 Route::get('/visaogeral', function () {
@@ -36,13 +36,13 @@ Route::put('/endereco/update', [AddressController::class, 'update'])->name('ende
 
     // --- CLIENTES ---
 Route::get('/clientes', [ClientController::class, 'index'])->name('clientes.index');
-Route::post('/clientes/search', [ClientController::class], 'search')->name('clientes.search');
 Route::get('/clientes/create', [ClientController::class, 'create'])->name('clientes.create');
 Route::post('/clientes/store', [ClientController::class, 'store'])->name('clientes.store');
 Route::get('/clientes/{client_id}', [ClientController::class, 'show'])->name('clientes.show');
 Route::get('/clientes/edit/{client_id}', [ClientController::class, 'edit'])->name('clientes.edit');
 Route::put('/clientes/update/{client_id}', [ClientController::class, 'update'])->name('clientes.update');
 Route::delete('/clientes/delete/{client_id}', [ClientController::class, 'delete'])->name('clientes.delete');
+Route::post('/clientes/search', [ClientController::class, 'search'])->name('clientes.search');
 
     // --- ---
 

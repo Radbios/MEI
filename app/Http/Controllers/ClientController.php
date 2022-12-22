@@ -57,6 +57,14 @@ class ClientController extends Controller
 
     public function search(Request $request)
     {
-        dd("pesquisando por {$request->search}");
+        // dd($request->search);
+        
+            $clientes = Client::where('name', 'LIKE', "%{$request->search}%")
+                ->orWhere('phoneNumber', 'LIKE', "%{$request->search}%")
+                // ->orWhere('addressId', 'LIKE', "%{$request->search}%")
+                // ->orWhere('email', 'LIKE', "%{$request->search}%")
+                ->paginate(10);
+        
+        return view('client.index', compact('clientes'));
     }
 }

@@ -5,31 +5,37 @@
 <!-- cards  -->
 <div class="cardBox">
     <div class="card">
-        <div>
-            <div class="numbers">80</div>
-            <div class="cardName">Vendas</div>
-        </div>
-        <div class="iconBx">
-            <ion-icon name="cart-outline"></ion-icon>
-        </div>
+        <a href="/encomendas">
+            <div>
+                <div class="numbers">80</div>
+                <div class="cardName">Vendas</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="cart-outline"></ion-icon>
+            </div>
+        </a>
     </div>
     <div class="card">
-        <div>
-            <div class="numbers">12</div>
-            <div class="cardName">Clientes</div>
-        </div>
-        <div class="iconBx">
-            <ion-icon name="accessibility-outline"></ion-icon>
-        </div>
+        <a href="/clientes">
+            <div>
+                <div class="numbers">12</div>
+                <div class="cardName">Clientes</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="accessibility-outline"></ion-icon>
+            </div>
+        </a>
     </div>
     <div class="card">
-        <div>
-            <div class="numbers">130</div>
-            <div class="cardName">Produtos</div>
-        </div>
-        <div class="iconBx">
-            <ion-icon name="chatbubbles-outline"></ion-icon>
-        </div>
+        <a href="/produtos">
+            <div>
+                <div class="numbers">130</div>
+                <div class="cardName">Produtos</div>
+            </div>
+            <div class="iconBx">
+                <ion-icon name="bag-outline"></ion-icon>
+            </div>
+        </a>
     </div>
     <div class="card">
         <div>
