@@ -26,7 +26,7 @@
                             <input type="text" class="form-control" id="nomeFornecedor" name="fornecedor">
                         </div>
                         <div class="mb-3">
-                            <label for="precoMaterial" class="form-label">Preço(unidade)</label>
+                            <label for="precoMaterial" class="form-label">Preço(da unidade)</label>
                             <input type="number" class="form-control" id="precoMaterial" name="preco">
                         </div>
                         <div class="mb-3">
@@ -58,7 +58,7 @@
             </form>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="submit" class="btn btn-primary">Salvar</button>
             </div>
         </div>
     </div>
