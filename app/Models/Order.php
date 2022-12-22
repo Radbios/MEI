@@ -13,6 +13,16 @@ class Order extends Model
         'deliveryDate',
         'state',
         'orderDate',
-        'clientId'
+        'clientId',
+        'frete'
     ];
+
+    public function client()
+    {
+        return $this->belongsTo(Client::class, "clientId", 'id');
+    }
+    public function orderProduct()
+    {
+        return $this->hasMany(OrderProduct::class, "orderId", 'id');
+    }
 }

@@ -32,14 +32,14 @@
         </li>
 
         <li class="side-item">
-            <a href="{{Route("encomendas.index")}}" class="link-item">
+            <a href="{{route("encomendas.index")}}" class="link-item">
                 <i class="bi bi-bag-fill"></i>
                 <div class="item-text">Encomendas</div>
             </a>
         </li>
 
         <li class="side-item">
-            <a href="{{ Route("estoque.index") }}" class="link-item">
+            <a href="{{route("estoque.index") }}" class="link-item">
                 <i class="bi bi-box-seam"></i>
                 <div class="item-text">Estoques</div>
             </a>

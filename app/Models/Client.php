@@ -20,4 +20,9 @@ class Client extends Model
     {
         return $this->belongsTo(Address::class, "addressId", 'id');
     }
+
+    public function order()
+    {
+        return $this->hasMany(Order::class, "clientId", 'id');
+    }
 }

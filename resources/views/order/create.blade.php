@@ -1,6 +1,4 @@
-@extends('layout')
 
-@section('content')
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -9,63 +7,56 @@
                 <h1 class="modal-title fs-5" id="exampleModalLabel">Cadastro de Encomendas</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <form>
+            <form action="{{Route("encomendas.store")}}" method="post">
+                @csrf
+                @method("post")
+                <div class="modal-body">
                     <div class="mb-3 d-flex flex-row justify-content-between">
                         <div class="mb-3">
                             <label for="nomeProduto" class="form-label">Nome do Produto</label>
-                            <input type="text" class="form-control" id="nomeProduto">
+                            <select name="productId" id="productId" class="form-control">
+                                <option value="" disabled selected>Selecione um produto</option>
+                                @foreach ($produtos as $produto)
+                                    <option value="{{$produto->id}}">{{$produto->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="mb-3">
-                            <label for="quantidadeEncomenda" class="form-label">Quantidade</label>
-                            <input type="text" class="form-control" id="quantidadeEncomenda">
+                            <label for="quantidade" class="form-label">Quantidade</label>
+                            <input type="text" class="form-control" id="quantidade" name="quantidade">
                         </div>
                     </div>
                     <div class="mb-3 d-flex flex-row justify-content-between">
                         <div class="mb-3">
                             <label for="nomeCliente" class="form-label">Cliente</label>
-                            <input type="text" class="form-control" id="nomeCliente">
-                        </div>
-                        <div class="mb-3">
-                            <label for="contatoCliente" class="form-label">Contato</label>
-                            <input type="tel" class="form-control" id="contatoCliente">
-                        </div>
-                    </div>
-                    <div class="mb-3 d-flex flex-row gap-2 justify-content-between">
-                        <div class="mb-3">
-                            <label for="cepCliente" class="form-label">CEP</label>
-                            <input type="text" class="form-control" id="cepCliente">
-                        </div>
-                        <div class="mb-3">
-                            <label for="numeroCliente" class="form-label">N°</label>
-                            <input type="text" class="form-control" id="numeroCliente">
-                        </div>
-                        <div class="mb-3">
-                            <label for="emailCliente" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="emailCliente">
+                            <select name="clientId" id="clientId" class="form-control">
+                                <option value="" disabled selected>Selecione um cliente</option>
+                                @foreach ($clientes as $cliente)
+                                    <option value="{{$cliente->id}}">{{$cliente->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                     <div class="mb-3 d-flex flex-row gap-2 justify-content-between">
-                        <div class="mb-3">
-                            <label for="enderecoCliente" class="form-label">Endereço</label>
-                            <input type="text" class="form-control" id="enderecoCliente">
-                        </div>
-                        <div class="mb-3">
-                            <label for="valorTotal" class="form-label">Valor Total</label>
-                            <input type="text" class="form-control" id="valorTotal">
-                        </div>
                         <div class="mb-3">
                             <label for="valorFrete" class="form-label">Frete</label>
-                            <input type="email" class="form-control" id="valorFrete">
+                            <input type="number" class="form-control" id="valorFrete" name="valorFrete">
+                        </div>
+                        <div class="mb-3">
+                            <label for="valorFrete" class="form-label">Data do pedido</label>
+                            <input type="date" class="form-control" id="orderDate" name="orderDate">
+                        </div>
+                        <div class="mb-3">
+                            <label for="valorFrete" class="form-label">Data de entrega</label>
+                            <input type="date" class="form-control" id="deliveryDate" name="deliveryDate">
                         </div>
                     </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                <button type="button" class="btn btn-primary">Salvar</button>
-            </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
-@endsection

@@ -26,30 +26,36 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>
-                            Nome do cliente
-                        </td>
+                    @foreach ($encomendas as $encomenda)    
+                        <tr>
+                            <td>
+                                {{$encomenda->client->name}}
+                            </td>
 
-                        <td>
-                            01/01/2022
-                        </td>
-                        <td>
-                            Não Iniciado/Iniciado/Concluido
-                        </td>
+                            <td>
+                                {{$encomenda->deliveryDate}}
+                            </td>
+                            <td>
+                                {{$encomenda->state}}
+                            </td>
 
-                        <td>
-                            <div class="">
-                                <button type="button" class="btn btn-primary bg-blue">Ver</button>
-                                <button type="button" class="btn btn-primary bg-blue">Editar</button>
-                                <button type="button" class="btn btn-primary bg-blue">Deletar</button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-
-                <tbody>
-
+                            <td>
+                                <div class="">
+                                    <a href="{{Route("encomendas.show", [$encomenda->id])}}">
+                                        <button type="button" class="btn btn-primary bg-blue">Ver</button>
+                                    </a>
+                                    <a href="{{Route("encomendas.edit", [$encomenda->id])}}"">
+                                            <button type=" button" class="btn btn-primary bg-blue">Editar</button>
+                                    </a>
+                                    <form action="{{Route("encomendas.delete", [$encomenda->id])}}" method="post">
+                                        @csrf
+                                        @method("delete")
+                                        <button type="submit" class="btn btn-primary bg-blue">Deletar</button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

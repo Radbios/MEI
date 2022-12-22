@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/assets/css/vendas.css">
     <link rel="stylesheet" href="/assets/css/layout.css">
     <link rel="stylesheet" href="/assets/css/dashboard.css">
-    <title>{{}}</title>
+    <title></title>
 </head>
 
 <body>

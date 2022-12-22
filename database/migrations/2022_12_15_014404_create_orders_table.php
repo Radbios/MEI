@@ -16,8 +16,9 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->string('state');
-            $table->dateTime('deliveryDate');
-            $table->dateTime('orderDate');
+            $table->integer('frete');
+            $table->date('deliveryDate');
+            $table->date('orderDate');
             $table->foreignId('clientId')->constrained('clients');
             $table->timestamps();
         });

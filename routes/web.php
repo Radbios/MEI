@@ -53,7 +53,7 @@ Route::get('/encomendas/create', [OrderController::class, 'create'])->name('enco
 Route::post('/encomendas/store', [OrderController::class, 'store'])->name('encomendas.store');
 Route::get('/encomendas/{encomendas_id}', [OrderController::class, 'show'])->name('encomendas.show');
 Route::get('/encomendas/edit/{encomendas_id}', [OrderController::class, 'edit'])->name('encomendas.edit');
-Route::put('/encomendas/update', [OrderController::class, 'update'])->name('encomendas.update');
+Route::put('/encomendas/update/{encomendas_id}', [OrderController::class, 'update'])->name('encomendas.update');
 Route::delete('/encomendas/delete/{encomendas_id}', [OrderController::class, 'delete'])->name('encomendas.delete');
 
     // --- ---

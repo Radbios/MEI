@@ -2,24 +2,37 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use App\Models\Order;
+use App\Models\OrderProduct;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class OrderController extends Controller
 {
     public function index(){
         $encomendas = Order::all();
-        return view('order.index', compact('encomendas'));
+        $produtos = Product::all();
+        $clientes = Client::all();
+        return view('order.index', compact('encomendas', 'produtos', 'clientes'));
     }
 
     public function store(Request $request){
-        Order::create([
+        $encomenda = Order::create([
             'deliveryDate' => $request['deliveryDate'],
-            'state' => $request['state'],
-            'orderState' => $request['orderState'],
+            'state' => "Em andamento",
+            'orderDate' => $request['orderDate'],
             'clientId' => $request['clientId'],
-        ]);     
-        return redirect()->route('materiais.index');
+            'frete' => $request['valorFrete']
+        ]);
+
+        OrderProduct::create([
+            'orderId' => $encomenda->id,
+            'productId' => $request['productId'],
+            'qnt' => $request['quantidade']
+        ]);
+
+        return redirect()->route('encomendas.index');
     }
 
     public function show($encomenda_id){
@@ -29,21 +42,29 @@ class OrderController extends Controller
 
     public function edit($encomenda_id){
         $encomenda = Order::findOrFail($encomenda_id);
-        return view("order.edit", compact("encomenda"));
+        $produtos = Product::all();
+        $clientes = Client::all();
+        return view("order.edit", compact("encomenda", 'produtos', 'clientes'));
     }
 
     public function update(Request $request, $encomenda_id){
-        Order::findOrFail($encomenda_id)->update([
+        $encomenda = Order::findOrFail($encomenda_id)->update([
             'deliveryDate' => $request['deliveryDate'],
-            'state' => $request['state'],
-            'orderState' => $request['orderState'],
+            'orderDate' => $request['orderDate'],
             'clientId' => $request['clientId'],
+            'frete' => $request['valorFrete']
         ]);
-        return redirect()->route('materiais.index');
+
+        OrderProduct::findOrFail($encomenda_id)->update([
+            'productId' => $request['productId'],
+            'qnt' => $request['quantidade']
+        ]);
+
+        return redirect()->route('encomendas.index');
     }
 
     public function delete($encomenda_id){
         Order::findOrFail($encomenda_id)->delete();
-        return redirect()->route('materiais.index');
+        return redirect()->route('encomendas.index');
     }
 }
