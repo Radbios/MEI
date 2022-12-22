@@ -29,7 +29,7 @@
                     <div class="mb-3 d-flex flex-row justify-content-between">
                         <div class="mb-3">
                             <label for="nomeCliente" class="form-label">Cliente</label>
-                            <select name="clientId" id="clientId" class="form-control">
+                            <select name="clientId" id="clientId" class="form-control overflow-auto mh-52px">
                                 <option value="" disabled selected>Selecione um cliente</option>
                                 @foreach ($clientes as $cliente)
                                     <option value="{{$cliente->id}}">{{$cliente->name}}</option>

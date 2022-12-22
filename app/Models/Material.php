@@ -11,9 +11,13 @@ class Material extends Model
 
     protected $fillable = [
         'name',
-        'type',
+        'fornecedor',
+        'contatoFornecedor',
+        'lote',
+        'validadeLote',
         'price',
         'amount',
-        'unit'
+        'unit',
+
     ];
 }

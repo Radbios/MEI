@@ -19,9 +19,9 @@ class MaterialController extends Controller
             'contatoFornecedor' => $request['contatoFornecedor'],
             'lote' => $request['lote'],
             'validadeLote' => $request['validadeLote'],
-            'price' => $request['price'],
-            'amount' => $request['amount'],
-            'unit' => $request['unit'],
+            'price' => $request['preco'],
+            'amount' => $request['qtd'],
+            'unit' => $request['unidade'],
         ]);
         return redirect()->route('estoque.index');
     }

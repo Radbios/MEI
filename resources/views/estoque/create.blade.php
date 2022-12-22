@@ -27,7 +27,11 @@
                         </div>
                         <div class="mb-3">
                             <label for="precoMaterial" class="form-label">Preço(unidade)</label>
-                            <input type="tel" class="form-control" id="precoMaterial" name="preco">
+                            <input type="number" class="form-control" id="precoMaterial" name="preco">
+                        </div>
+                        <div class="mb-3">
+                            <label for="unidade" class="form-label">unidade</label>
+                            <input type="text" class="form-control" id="unidade" name="unidade">
                         </div>
                     </div>
                     <div class="mb-3 d-flex flex-row gap-2 justify-content-between">
@@ -37,7 +41,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="valorTotal" class="form-label">Valor Total</label>
-                            <input type="text" class="form-control" id="valorTotal" value="">
+                            <input type="number" class="form-control" id="valorTotal" value="">
                         </div>
                     </div>
                     <div class="mb-3 d-flex flex-row gap-2 justify-content-between">
