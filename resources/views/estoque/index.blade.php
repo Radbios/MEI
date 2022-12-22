@@ -21,7 +21,7 @@
                 <tr>
                     <th scope="col">Item</th>
                     <th scope="col">Quantidade</th>
-                    <th scope="col">Tipo</th>
+                    <th scope="col">Valor/un</th>
                     <th scope="col">Ação</th>
                 </tr>
             </thead>
@@ -37,7 +37,7 @@
                     </td>
 
                     <td>
-                        {{ $material->type }}
+                        {{ $material->value }}/{{ $material->unit }}
                     </td>
 
                     <td>

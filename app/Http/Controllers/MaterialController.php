@@ -14,8 +14,11 @@ class MaterialController extends Controller
 
     public function store(Request $request){
         Material::create([
-            'name' => $request['name'],
-            'type' => $request['type'],
+            'name' => $request['nome'],
+            'fornecedor'=> $request['fornecedor'],
+            'contatoFornecedor' => $request['contatoFornecedor'],
+            'lote' => $request['lote'],
+            'validadeLote' => $request['validadeLote'],
             'price' => $request['price'],
             'amount' => $request['amount'],
             'unit' => $request['unit'],
@@ -35,11 +38,14 @@ class MaterialController extends Controller
 
     public function update(Request $request, $material_id){
         Material::findOrFail($material_id)->update([
-            'name' => $request['name'],
-            'type' => $request['type'],
-            'price' => $request['price'],
-            'amount' => $request['amount'],
-            'unit' => $request['unit'],
+            'name' => $request['nome'],
+            'fornecedor'=> $request['fornecedor'],
+            'contatoFornecedor' => $request['contatoFornecedor'],
+            'lote' => $request['lote'],
+            'validadeLote' => $request['validadeLote'],
+            'price' => $request['preco'],
+            'amount' => $request['quantidade'],
+            'unit' => $request['unidade'],
         ]);
         return redirect()->route('estoque.index');
     }
