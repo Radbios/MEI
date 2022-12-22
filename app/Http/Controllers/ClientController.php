@@ -9,7 +9,8 @@ use Illuminate\Http\Request;
 class ClientController extends Controller
 {
     public function index(){
-        $clientes = Client::all();
+        $clientes = Client::paginate(7);
+
         return view('client.index', compact('clientes'));
     }
 
@@ -52,5 +53,10 @@ class ClientController extends Controller
     public function delete($cliente_id){
         Client::findOrFail($cliente_id)->delete();
         return redirect()->route('clientes.index');
+    }
+
+    public function search(Request $request)
+    {
+        dd("pesquisando por {$request->search}");
     }
 }

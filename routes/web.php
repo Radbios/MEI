@@ -35,8 +35,8 @@ Route::put('/endereco/update', [AddressController::class, 'update'])->name('ende
         // --- ---
 
     // --- CLIENTES ---
-
 Route::get('/clientes', [ClientController::class, 'index'])->name('clientes.index');
+Route::post('/clientes/search', [ClientController::class], 'search')->name('clientes.search');
 Route::get('/clientes/create', [ClientController::class, 'create'])->name('clientes.create');
 Route::post('/clientes/store', [ClientController::class, 'store'])->name('clientes.store');
 Route::get('/clientes/{client_id}', [ClientController::class, 'show'])->name('clientes.show');

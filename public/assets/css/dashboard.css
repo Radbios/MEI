@@ -302,6 +302,45 @@ body {
     color: var(--white);
     border-radius: 6px;
 }
+.btn:hover{
+    color: white;
+}
+.btnVer {
+    position: relative;
+    padding: 5px 10px;
+    background: rgba(73, 255, 0, 0.6);
+    text-decoration: none;
+    color: var(--black1);
+    border-radius: 6px;
+    box-shadow: 0 0 0.2em var(--blue);
+}
+.btnVer:hover {
+    background: rgba(73, 255, 0, 0.9);
+}
+.btnEditar {
+    position: relative;
+    padding: 5px 10px;
+    background: rgba(251, 255, 0, 0.6);
+    text-decoration: none;
+    color: var(--black1);
+    border-radius: 6px;
+    box-shadow: 0 0 0.2em var(--blue);
+}
+.btnEditar:hover {
+    background: rgba(251, 255, 0, 0.9);
+}
+.btnExcluir {
+    position: relative;
+    padding: 5px 10px;
+    background: rgba(255, 0, 0, 0.6);
+    text-decoration: none;
+    color: var(--black1);
+    border-radius: 6px;
+    box-shadow: 0 0 0.2em var(--blue);
+}
+.btnExcluir:hover {
+    background: rgba(255, 0, 0, 0.9);
+}
 .details table{
     width: 100%;
     border-collapse: collapse;

@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class OrderController extends Controller
 {
     public function index(){
-        $encomendas = Order::all();
+        $encomendas = Order::paginate(7);
         $produtos = Product::all();
         $clientes = Client::all();
         return view('order.index', compact('encomendas', 'produtos', 'clientes'));

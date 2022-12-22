@@ -100,6 +100,7 @@
                     </tr>
                 </tbody>
             </table>
+            {{ $clientes->links() }}
         </div>
     </section>
 @endsection

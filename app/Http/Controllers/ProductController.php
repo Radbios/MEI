@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index(){
-        $produtos = Product::all();
+        $produtos = Product::paginate(7);
         return view('product.index', compact('produtos'));
     }
 

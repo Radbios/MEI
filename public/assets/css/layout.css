@@ -4,6 +4,8 @@ body{
     width: 100%;
     height: 100vh;
     background-color: #eef1fc;
+    overflow: hidden;
+
 }
 
 ul{
@@ -40,7 +42,7 @@ main{
 
 .content{
     display: grid;
-    height: 91%;
+    height: 95%;
     width: 100%;
     grid-template-columns: 1.5fr 8.5fr;
     gap: 0.5%;

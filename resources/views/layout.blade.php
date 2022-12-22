@@ -34,7 +34,7 @@
         <sidebar>
             <x-sideBar></x-sideBar>
         </sidebar>
-        <div class="container-sm" style="overflow:auto;">
+        <div class="container-fill" style="overflow:auto;">
             @yield('content')
         </div>
     </div>

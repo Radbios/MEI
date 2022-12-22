@@ -2,4 +2,12 @@
     padding-bottom: 24px;
 }
 
+.pagination a{
+    color:#3D479B;
+}
+
+.pagination a:hover {
+    color: #192de0;
+}
+
 
