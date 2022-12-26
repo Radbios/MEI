@@ -20,14 +20,14 @@
             <div class="inputBoxRight">
                 <div class="labelInputRight">
                     <label for="name">Nome</label>
-                    <input name="name" id="name" type="text" required>
+                    <input name="name" id="name" type="text" required value="{{ old('name') }}">
                     @error('name')
                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                     @enderror
                 </div>
                 <div class="labelInputRight">
                     <label for="email">E-mail</label>
-                    <input name="email" id="email" type="text" required>
+                    <input name="email" id="email" type="text" required value="{{ old('email') }}">
                     @error('email')
                         <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
                     @enderror
