@@ -27,6 +27,13 @@ Route::get('/visaogeral', function () {
     return view('dashboard');
 });
 
+    // --- REGISTRO --- //
+    Route::get('register', [RegisterController::class, 'create'])->middleware('guest'); // view
+    Route::post('register', [RegisterController::class, 'store'])->middleware('guest'); // criacao
+    // --- SESSAO --- //
+    Route::get('login', [SessionsController::class, 'create'])->middleware('guest'); // view
+    Route::post('login', [SessionsController::class, 'store'])->middleware('guest'); // autenticacao
+    Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth'); // logout
     // --- ENDEREÇO ---
 
 Route::post('/endereco/store', [AddressController::class, 'store'])->name('endereco.store');
