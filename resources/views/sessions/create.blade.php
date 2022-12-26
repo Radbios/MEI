@@ -40,6 +40,7 @@
                     <a href="/recuperacao">Esqueci minha senha</a>
                 </div>
             </div>
+            <a href="/register">Registre-se</a>
             <div class="boxBtnLogin">
                 <button type="submit" class="btnLogin" >
                     Login
