@@ -28,12 +28,12 @@ Route::get('/visaogeral', function () {
 });
 
     // --- REGISTRO --- //
-    Route::get('register', [RegisterController::class, 'create'])->middleware('guest'); // view
-    Route::post('register', [RegisterController::class, 'store'])->middleware('guest'); // criacao
+    Route::get('/register', [RegisterController::class, 'create'])->middleware('guest'); // view
+    Route::post('/register', [RegisterController::class, 'store'])->middleware('guest'); // criacao
     // --- SESSAO --- //
-    Route::get('login', [SessionsController::class, 'create'])->middleware('guest'); // view
-    Route::post('login', [SessionsController::class, 'store'])->middleware('guest'); // autenticacao
-    Route::post('logout', [SessionsController::class, 'destroy'])->middleware('auth'); // logout
+    Route::get('/login', [SessionsController::class, 'create'])->middleware('guest'); // view
+    Route::post('/login', [SessionsController::class, 'store'])->middleware('guest'); // autenticacao
+    Route::post('/logout', [SessionsController::class, 'destroy'])->middleware('auth'); // logout
     // --- ENDEREÇO ---
 
 Route::post('/endereco/store', [AddressController::class, 'store'])->name('endereco.store');
@@ -86,9 +86,9 @@ Route::put('/produtos/update/{produtos_id}', [ProductController::class, 'update'
 Route::delete('/produtos/delete/{produtos_id}', [ProductController::class, 'delete'])->name('produtos.delete');
     // --- ---
 
-Route::get('/login', function () {
-    return view('signIn');
-});
+// Route::get('/login', function () {
+//     return view('sessions.create');
+// });
 
 Route::get('/recuperacao', function () {
     return view('recover');

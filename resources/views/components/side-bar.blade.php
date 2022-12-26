@@ -48,7 +48,7 @@
 </div>
 
 <div id="logout" class="side-item">
-    <a href="/login" class="link-item">
+    <a href="/logout" class="link-item">
         <i class="bi bi-door-open"></i>
         <div class="item-text">Sair</div>
     </a>
