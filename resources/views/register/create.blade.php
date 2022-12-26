@@ -15,34 +15,44 @@
             <p class="title" id="titleBlue">Login</p>
             <p id="subtitle">Bem-vindo! Somos um sistema de gerenciamento desenvolvido por alunos da UFAL.</p>
         </div>
-        <div class="inputBoxRight">
-            <div class="labelInputRight">
-                <label for="name">Nome</label>
-                <input name="name" id="name" type="text">
-            </div>
-            <div class="labelInputRight">
-                <label for="email">E-mail</label>
-                <input name="email" id="email" type="text">
-            </div>
-            <div class="labelInputRight">
-                <label for="password">Senha</label>
-                <input name="password" id="password" type="password">
-            </div>
-            <div class="checkBoxRight">
-                <div class="checkboxText">
-                    <input type="checkbox" name="" id="remember-me">
-                    <label for="remember-me">Lembre-me</label>
+        <form action="/register" method="POST">
+            @csrf
+            <div class="inputBoxRight">
+                <div class="labelInputRight">
+                    <label for="name">Nome</label>
+                    <input name="name" id="name" type="text" required>
+                    @error('name')
+                        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                    @enderror
                 </div>
-                <a href="/recuperacao">Esqueci minha senha</a>
+                <div class="labelInputRight">
+                    <label for="email">E-mail</label>
+                    <input name="email" id="email" type="text" required>
+                    @error('email')
+                        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="labelInputRight">
+                    <label for="password">Senha</label>
+                    <input name="password" id="password" type="password" required>
+                    @error('password')
+                        <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
+                    @enderror
+                </div>
+                <div class="checkBoxRight">
+                    <div class="checkboxText">
+                        <input type="checkbox" name="" id="remember-me">
+                        <label for="remember-me">Lembre-me</label>
+                    </div>
+                    <a href="/recuperacao">Esqueci minha senha</a>
+                </div>
             </div>
-        </div>
-        <div class="boxBtnLogin">
-            <button class="btnLogin">
-                <a href="/">
+            <div class="boxBtnLogin">
+                <button type="submit"class="btnLogin">
                     Login
-                </a>
-            </button>
-        </div>
+                </button>
+            </div>
+        </form>
     </div>
 </div>
 @endsection
