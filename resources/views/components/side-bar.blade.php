@@ -47,9 +47,10 @@
     </ul>
 </div>
 
-<div id="logout" class="side-item">
-    <a href="/logout" class="link-item">
+<form method="POST" action="/logout" class="text-xs font-semibold text-blue-500 ml-6">
+    <div id="logout" class="side-item">
+        @csrf
         <i class="bi bi-door-open"></i>
-        <div class="item-text">Sair</div>
-    </a>
-</div>
+        <button type="submit" class="link-item"><p class="item-text">Sair</p></button>
+    </div>
+</form>

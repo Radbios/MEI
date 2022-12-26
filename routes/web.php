@@ -6,6 +6,8 @@ use App\Http\Controllers\MaterialController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SellController;
+use App\Http\Controllers\SessionController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('login');
 });
 
 Route::get('/visaogeral', function () {
@@ -31,9 +33,9 @@ Route::get('/visaogeral', function () {
     Route::get('/register', [RegisterController::class, 'create'])->middleware('guest'); // view
     Route::post('/register', [RegisterController::class, 'store'])->middleware('guest'); // criacao
     // --- SESSAO --- //
-    Route::get('/login', [SessionsController::class, 'create'])->middleware('guest'); // view
-    Route::post('/login', [SessionsController::class, 'store'])->middleware('guest'); // autenticacao
-    Route::post('/logout', [SessionsController::class, 'destroy'])->middleware('auth'); // logout
+    Route::get('/login', [SessionController::class, 'create'])->middleware('guest'); // view
+    Route::post('/login', [SessionController::class, 'store'])->middleware('guest'); // autenticacao
+    Route::post('/logout', [SessionController::class, 'destroy'])->middleware('auth'); // logout
     // --- ENDEREÇO ---
 
 Route::post('/endereco/store', [AddressController::class, 'store'])->name('endereco.store');

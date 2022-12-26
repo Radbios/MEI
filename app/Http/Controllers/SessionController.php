@@ -27,11 +27,11 @@ class SessionController extends Controller
         }
         session()->regenerate();
 
-        return redirect('/');
+        return redirect('/visaogeral');
     }
 
     public function destroy(){
         auth()->logout();
-        return redirect('/');
+        return redirect('/login');
     }
 }
